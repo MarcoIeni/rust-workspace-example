@@ -8,3 +8,6 @@ edition = "2021"
 [dependencies]
 serde = "0.8"
 anyhow = "1.0.50"
+tokio = "1"
+tonic = "0.6"
+lapin = "1"
