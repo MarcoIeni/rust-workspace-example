@@ -34,7 +34,7 @@ checksum = "028cb766932137535fe8a320245e385bac379506d7e9e3d0375be069bb6fb0de"
 dependencies = [
  "cookie-factory",
  "nom",
- "serde 1.0.132",
+ "serde",
  "serde_json",
 ]
 
@@ -429,7 +429,7 @@ dependencies = [
  "mio",
  "parking_lot",
  "pinky-swear",
- "serde 1.0.132",
+ "serde",
 ]
 
 [[package]]
@@ -552,7 +552,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "lapin",
- "serde 0.8.23",
+ "serde",
  "tokio 1.15.0",
  "tonic",
 ]
@@ -854,12 +854,6 @@ dependencies = [
 
 [[package]]
 name = "serde"
-version = "0.8.23"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9dad3f759919b92c3068c696c15c3d17238234498bbdcc80f2c469606f948ac8"
-
-[[package]]
-name = "serde"
 version = "1.0.132"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8b9875c23cf305cd1fd7eb77234cbb705f21ea6a72c637a5c6db5fe4b8e7f008"
@@ -886,7 +880,7 @@ checksum = "bcbd0344bc6533bc7ec56df11d42fb70f1b912351c0825ccb7211b59d8af7cf5"
 dependencies = [
  "itoa 1.0.1",
  "ryu",
- "serde 1.0.132",
+ "serde",
 ]
 
 [[package]]
