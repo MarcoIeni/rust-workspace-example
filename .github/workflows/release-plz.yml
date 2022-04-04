@@ -1,0 +1,19 @@
+name: Release-plz
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  release-plz:
+    name: Release-plz
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run release-plz
+        uses: MarcoIeni/release-plz-action@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
