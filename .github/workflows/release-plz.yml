@@ -14,6 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Run release-plz
-        uses: MarcoIeni/release-plz-action@master
+        uses: MarcoIeni/release-plz-action@debug
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
