@@ -736,6 +736,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "marco-test-one"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "lapin",
+ "serde",
+ "tokio",
+ "tonic",
+]
+
+[[package]]
+name = "marco-test-two"
+version = "0.1.0"
+dependencies = [
+ "tokio",
+]
+
+[[package]]
 name = "matches"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -810,17 +828,6 @@ name = "once_cell"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "da32515d9f6e6e489d7bc9d84c71b060db7247dc035bbe44eac88cf87486d8d5"
-
-[[package]]
-name = "one"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "lapin",
- "serde",
- "tokio",
- "tonic",
-]
 
 [[package]]
 name = "opaque-debug"
@@ -1470,13 +1477,6 @@ name = "try-lock"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "59547bce71d9c38b83d9c0e92b6066c4253371f15005def0c30d9657f50c7642"
-
-[[package]]
-name = "two"
-version = "0.1.0"
-dependencies = [
- "tokio",
-]
 
 [[package]]
 name = "typenum"
