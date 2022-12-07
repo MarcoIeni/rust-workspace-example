@@ -1,3 +1,3 @@
-# rust workspace example
+# Rust workspace example
 
 Experiment with cargo workspaces.
