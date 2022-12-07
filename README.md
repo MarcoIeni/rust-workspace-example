@@ -1,3 +1,3 @@
 # Rust workspace example
 
-Experiment with cargo workspaces.
+An experiment with cargo workspaces.
