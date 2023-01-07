@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run release-plz
-        uses: MarcoIeni/release-plz-action@set
+        uses: MarcoIeni/release-plz-action@main
         with:
           command: release-pr
         env:
