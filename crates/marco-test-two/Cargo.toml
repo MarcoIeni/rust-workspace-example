@@ -1,6 +1,6 @@
 [package]
 name = "marco-test-two"
-version = "0.1.8"
+version = "0.1.9"
 edition = "2021"
 description = "just a test"
 license = "MIT OR Apache-2.0"
@@ -9,4 +9,4 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 tokio = "1.16"
-marco-test-one = {path = "../marco-test-one", version = "0.1.4" }
+marco-test-one = {path = "../marco-test-one", version = "0.1.5" }
