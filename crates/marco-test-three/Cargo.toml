@@ -9,7 +9,7 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 serde.workspace = true
-anyhow = "1.0.68"
+anyhow = "1.0.69"
 tokio = "1"
 tonic = "0.8"
 lapin = "2"
