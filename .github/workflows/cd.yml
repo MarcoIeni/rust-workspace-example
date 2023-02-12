@@ -32,7 +32,9 @@ on:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v3
-      - run: echo "Name: ${{ github.event.release.name }} Description: ${{ github.event.release.body }}"
+      - run: echo "Name: $NAME"
+        env:
+          NAME: ${{ github.event.release.name }}
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/setup-cross-toolchain-action@v1
