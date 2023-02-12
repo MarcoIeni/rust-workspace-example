@@ -2,7 +2,6 @@ name: CD # Continuous Deployment
 
 on:
   release:
-    types: [published]
 
 jobs:
   upload-assets:
