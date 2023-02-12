@@ -6,6 +6,7 @@ on:
 jobs:
   upload-assets:
     name: ${{ matrix.target }}
+    runs-on: ${{ matrix.job.os }}
     if: github.repository_owner == 'MarcoIeni'
     strategy:
       matrix:
