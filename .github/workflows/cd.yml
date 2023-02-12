@@ -1,5 +1,9 @@
 name: CD # Continuous Deployment
 
+permissions:
+  # TODO: once `releases: write` is supported, use it instead.
+  contents: write
+
 on:
   release:
     types: [published]
@@ -7,8 +11,8 @@ on:
 jobs:
   upload-assets:
     name: ${{ matrix.target }}
-    runs-on: ${{ matrix.job.os }}
     if: github.repository_owner == 'MarcoIeni'
+    runs-on: ${{ matrix.job.os }}
     strategy:
       matrix:
         # When updating this list, the reminder to update the target list in ci.yml.
