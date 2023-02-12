@@ -24,7 +24,7 @@ defaults:
 jobs:
   upload-assets:
     name: ${{ matrix.target }}
-    if: github.repository_owner == 'MarcoIeni'
+    if: github.repository_owner == 'MarcoIeni' && startsWith(github.event.release.name, 'marco-test-one-v')
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
