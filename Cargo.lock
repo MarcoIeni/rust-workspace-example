@@ -789,7 +789,7 @@ dependencies = [
 
 [[package]]
 name = "marco-test-one"
-version = "0.1.17"
+version = "0.1.18"
 
 [[package]]
 name = "marco-test-three"
@@ -804,7 +804,7 @@ dependencies = [
 
 [[package]]
 name = "marco-test-two"
-version = "0.1.21"
+version = "0.1.22"
 dependencies = [
  "marco-test-one",
  "tokio",
