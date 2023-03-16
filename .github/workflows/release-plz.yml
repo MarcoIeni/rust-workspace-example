@@ -10,7 +10,6 @@ on:
       - main
 
 jobs:
-
   release-plz:
     name: Release-plz
     runs-on: ubuntu-latest
