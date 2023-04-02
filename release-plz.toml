@@ -1,0 +1,9 @@
+[workspace]
+update_dependencies = true
+
+[package.marco-test-one]
+semver_check = "no"
+update_changelog = false
+
+[package.marco-test-two]
+update_changelog = false
