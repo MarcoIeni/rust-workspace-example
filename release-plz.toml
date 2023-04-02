@@ -4,6 +4,7 @@ update_dependencies = true
 [package.marco-test-one]
 semver_check = "no"
 update_changelog = true
+changelog_path = "./CHANGELOG.md"
 
 [package.marco-test-two]
 update_changelog = false
