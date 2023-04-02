@@ -3,7 +3,7 @@ update_dependencies = true
 
 [package.marco-test-one]
 semver_check = "no"
-update_changelog = false
+update_changelog = true
 
 [package.marco-test-two]
 update_changelog = false
