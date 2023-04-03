@@ -6,3 +6,6 @@ update_changelog = false
 semver_check = "no"
 update_changelog = true
 changelog_path = "./CHANGELOG.md"
+
+[package.marco-test-two]
+update_changelog = true
