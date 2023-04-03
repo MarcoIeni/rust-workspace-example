@@ -11,5 +11,5 @@ license = "MIT OR Apache-2.0"
 serde.workspace = true
 anyhow = "1.0.69"
 tokio = "1"
-tonic = "0.8"
+tonic = "0.9"
 lapin = "2"
