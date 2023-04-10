@@ -3,7 +3,7 @@ update_dependencies = true
 update_changelog = false
 
 [workspace.git_release]
-enabled = false
+enable = false
 
 [package.marco-test-one]
 semver_check = "no"
@@ -14,4 +14,4 @@ changelog_path = "./CHANGELOG.md"
 update_changelog = true
 
 [package.marco-test-two.git_release]
-enabled = true
+enable = true
