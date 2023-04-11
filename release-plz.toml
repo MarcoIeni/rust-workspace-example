@@ -2,6 +2,10 @@
 update_dependencies = true
 update_changelog = false
 
+[workspace.release]
+no_verify = true
+allow_dirty = false
+
 [workspace.git_release]
 enable = true
 
