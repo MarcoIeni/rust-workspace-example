@@ -4,7 +4,7 @@ changelog_update = false
 
 [[package]]
 name = "marco-test-one"
-semver_check = "no"
+semver_check = false
 changelog_update = true
 changelog_path = "./CHANGELOG.md"
 
