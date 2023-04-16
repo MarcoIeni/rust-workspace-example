@@ -1,21 +1,13 @@
 [workspace]
-update_dependencies = true
-update_changelog = false
+dependencies_update = true
+changelog_update = false
 
-[workspace.release]
-no_verify = true
-allow_dirty = false
-
-[workspace.git_release]
-enable = true
-
-[package.marco-test-one]
+[[package]]
+name = "marco-test-one"
 semver_check = "no"
-update_changelog = true
+changelog_update = true
 changelog_path = "./CHANGELOG.md"
 
-[package.marco-test-two]
-update_changelog = true
-
-[package.marco-test-two.git_release]
-enable = false
+[[package]]
+name = "marco-test-two"
+changelog_update = true
