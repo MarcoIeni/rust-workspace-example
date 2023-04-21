@@ -1,6 +1,7 @@
 [workspace]
 dependencies_update = true
 changelog_update = false
+pr_labels = ["release"]
 
 [[package]]
 name = "marco-test-one"
