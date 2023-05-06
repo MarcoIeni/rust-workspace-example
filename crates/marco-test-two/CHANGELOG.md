@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.4](https://github.com/MarcoIeni/rust-workspace-example/compare/marco-test-two-v0.4.3...marco-test-two-v0.4.4) - 2023-05-06
+
+### Other
+- rename again
+- rename crates dir for testing
+- wip
+
 ## [0.4.3](https://github.com/MarcoIeni/rust-workspace-example/compare/marco-test-two-v0.4.2...marco-test-two-v0.4.3) - 2023-04-16
 
 ### Other
