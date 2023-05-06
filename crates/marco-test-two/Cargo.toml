@@ -2,7 +2,7 @@
 name = "marco-test-two"
 version = "0.4.4"
 edition = "2021"
-description = "just a test"
+description = "just a test for release-plz"
 license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
