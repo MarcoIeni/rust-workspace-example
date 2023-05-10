@@ -3,9 +3,5 @@ members = [
     "crates/*",
 ]
 
-[workspace.package]
-version = "0.2.5"
-
-
 [workspace.dependencies]
 serde = "1.0.155"
