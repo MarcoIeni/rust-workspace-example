@@ -4,4 +4,4 @@ members = [
 ]
 
 [workspace.dependencies]
-serde = "1.0.155"
+serde = "1.0.163"
