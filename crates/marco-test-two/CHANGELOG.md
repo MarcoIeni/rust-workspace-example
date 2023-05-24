@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.7](https://github.com/MarcoIeni/rust-workspace-example/compare/marco-test-two-v0.4.6...marco-test-two-v0.4.7) - 2023-05-22
+
+### Other
+- Bump tokio from 1.28.0 to 1.28.1 (#160)
+
 ## [0.4.6](https://github.com/MarcoIeni/rust-workspace-example/compare/marco-test-two-v0.4.5...marco-test-two-v0.4.6) - 2023-05-10
 
 ### Other
