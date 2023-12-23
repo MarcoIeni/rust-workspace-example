@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CARGO_FMT_BOT_TOKEN }}
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - name: Run Cargo fmt bot
