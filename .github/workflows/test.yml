@@ -1,0 +1,28 @@
+name: Create new file
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  my-job:
+    name: My job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - id: git-author
+        name: Git config
+        uses: MarcoIeni/git-config@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes
+        run: |
+          echo "${{ steps.git-author.outputs.email }}"
+          echo "${{ steps.git-author.outputs.name }}"
+          touch new-file
+          git add .
+          git commit -m "Create new file"
+          git push
