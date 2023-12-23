@@ -17,5 +17,3 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - name: Run Cargo fmt bot
         uses: MarcoIeni/cargo-fmt-bot@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
