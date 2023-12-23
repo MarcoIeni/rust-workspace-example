@@ -18,4 +18,4 @@ jobs:
       - name: Run Cargo fmt bot
         uses: MarcoIeni/cargo-fmt-bot@main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CARGO_FMT_BOT_TOKEN }}
