@@ -17,20 +17,7 @@ jobs:
           token: ${{ secrets.CARGO_FMT_BOT_TOKEN }}
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
-      - name: Configure git user from GitHub token
-        uses: MarcoIeni/git-config@v0.1
+      - name: Cargo assist
+        uses: MarcoIeni/cargo-assist@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Fix formatting and clippy
-        shell: bash
-        run: |
-          cargo clippy --fix
-          cargo fmt --all
-
-          # If repository has uncommitted changes, commit them
-          if [[ -n $(git status -s) ]]
-          then
-              git add .
-              git commit -m "cargo fmt and clippy fixes"
-              git push
-          fi
