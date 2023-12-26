@@ -17,7 +17,12 @@ jobs:
           token: ${{ secrets.CARGO_FMT_BOT_TOKEN }}
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
+      - name: My custom step
+        run: cargo update
       - name: Cargo assist
         uses: MarcoIeni/cargo-assist@main
+        with:
+          # Needed because after the custom step, the repository contains uncommited changes (Cargo.lock in this case).
+          clippy_allow_dirty: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
