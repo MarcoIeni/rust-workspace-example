@@ -1,4 +1,4 @@
-name: Cargo fmt bot
+name: Cargo Assist
 
 permissions:
   contents: write
@@ -7,8 +7,8 @@ on:
   push:
 
 jobs:
-  cargo-fmt-bot:
-    name: Cargo fmt bot
+  cargo-assist:
+    name: Cargo assist
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
