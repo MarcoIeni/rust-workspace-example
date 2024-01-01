@@ -18,6 +18,6 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - name: Cargo assist
-        uses: MarcoIeni/cargo-assist@main
+        uses: MarcoIeni/cargo-assist@v0.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
