@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.9](https://github.com/MarcoIeni/rust-workspace-example/compare/marco-test-two-v0.4.8...marco-test-two-v0.4.9) - 2024-01-17
+
+### Other
+- Bump tokio from 1.34.0 to 1.35.0 ([#179](https://github.com/MarcoIeni/rust-workspace-example/pull/179))
+- Bump tokio from 1.33.0 to 1.34.0 ([#178](https://github.com/MarcoIeni/rust-workspace-example/pull/178))
+- Bump tokio from 1.29.1 to 1.33.0 ([#177](https://github.com/MarcoIeni/rust-workspace-example/pull/177))
+- Bump tokio from 1.28.2 to 1.29.1 ([#167](https://github.com/MarcoIeni/rust-workspace-example/pull/167))
+- add cargo-assist ([#181](https://github.com/MarcoIeni/rust-workspace-example/pull/181))
+- wippppp
+
 ## [0.4.8](https://github.com/MarcoIeni/rust-workspace-example/compare/marco-test-two-v0.4.7...marco-test-two-v0.4.8) - 2023-07-25
 
 ### Other
