@@ -21,3 +21,4 @@ jobs:
         uses: MarcoIeni/cargo-assist@v0.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          working_directory: subdir
