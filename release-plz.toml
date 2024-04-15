@@ -1,11 +1,13 @@
 [[package]] # the double square brackets define a TOML table array
 name = "marco-test-two" # name of the package to configure
-changelog_update = true
 changelog_path = "./CHANGELOG.md"
 
 [[package]] # the double square brackets define a TOML table array
 name = "marco-test-one" # name of the package to configure
-changelog_update = true
+changelog_path = "./CHANGELOG.md"
+
+[[package]] # the double square brackets define a TOML table array
+name = "marco-test-three" # name of the package to configure
 changelog_path = "./CHANGELOG.md"
 
 [changelog]
