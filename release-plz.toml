@@ -1,12 +1,12 @@
-[workspace]
-# disable the changelog for all packages
-changelog_update = false
-
 [[package]] # the double square brackets define a TOML table array
 name = "marco-test-two" # name of the package to configure
 changelog_update = true
 changelog_path = "./CHANGELOG.md"
-changelog_include = ["marco-test-one", "marco-test-three"]
+
+[[package]] # the double square brackets define a TOML table array
+name = "marco-test-one" # name of the package to configure
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
 
 [changelog]
 body = """
