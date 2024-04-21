@@ -1,4 +1,6 @@
+[workspace]
+release_always = false
+
 [[package]] # the double square brackets define a TOML table array
 name = "marco-test-two" # name of the package to configure
 changelog_include = ["marco-test-one"] # include commits from `release_plz_core` in the changelog
-release_always = false
