@@ -38,11 +38,11 @@ jobs:
           RELEASES_CREATED: ${{ steps.release-plz.outputs.releases_created }}
         run: |
           set -e
-          echo "$RELEASES" # example: [{"package_name":"my-package","tag":"v0.1.0","version":"0.1.0"}]
-          echo "$PRS" # example: []
-          echo "$PR" # example: {}
-          echo "$PRS_CREATED" # example: true
-          echo "$RELEASES_CREATED" # example: true
+          echo "releases: $RELEASES" # example: [{"package_name":"my-package","tag":"v0.1.0","version":"0.1.0"}]
+          echo "prs: $PRS" # example: []
+          echo "pr: $PR" # example: {}
+          echo "prs_created: $PRS_CREATED" # example: true
+          echo "releases_created: $RELEASES_CREATED" # example: true
 
           # get the number of releases with jq
           releases_length=$(echo "$RELEASES" | jq 'length')
