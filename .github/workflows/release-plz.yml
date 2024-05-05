@@ -21,6 +21,8 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2 # experimental
+        with:
+          workspaces: ""
       - name: Run release-plz
         id: release-plz
         uses: MarcoIeni/release-plz-action@main
