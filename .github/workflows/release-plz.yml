@@ -22,7 +22,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2 # experimental
         with:
-          workspaces: ""
+          workspaces: "subdir -> subdir/target"
       - name: Run release-plz
         id: release-plz
         uses: MarcoIeni/release-plz-action@main
