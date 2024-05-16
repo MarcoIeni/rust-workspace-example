@@ -932,7 +932,7 @@ checksum = "b5e6163cb8c49088c2c36f57875e58ccd8c87c7427f7fbd50ea6710b2f3f2e8f"
 
 [[package]]
 name = "marco-test-one"
-version = "0.3.9"
+version = "0.3.10"
 
 [[package]]
 name = "marco-test-three"
@@ -947,7 +947,7 @@ dependencies = [
 
 [[package]]
 name = "marco-test-two"
-version = "0.4.16"
+version = "0.4.17"
 dependencies = [
  "marco-test-one",
  "tokio",
