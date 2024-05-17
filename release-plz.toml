@@ -3,4 +3,28 @@ release_always = false
 
 [[package]] # the double square brackets define a TOML table array
 name = "marco-test-two" # name of the package to configure
-changelog_include = ["marco-test-one"] # include commits from `release_plz_core` in the changelog
+changelog_path = "./CHANGELOG.md"
+
+[[package]] # the double square brackets define a TOML table array
+name = "marco-test-one" # name of the package to configure
+changelog_path = "./CHANGELOG.md"
+
+[[package]] # the double square brackets define a TOML table array
+name = "marco-test-three" # name of the package to configure
+changelog_path = "./CHANGELOG.md"
+
+[changelog]
+body = """
+
+## `{{ package }}` - [{{ version | trim_start_matches(pat="v") }}](https://github.com/marcoieni/rust-workspace-example/compare/{{ package }}-v{{ previous.version }}...{{ package }}-v{{ version }}) - {{ timestamp | date(format="%Y-%m-%d") }}
+{% for group, commits in commits | group_by(attribute="group") %}
+### {{ group | upper_first }}
+{% for commit in commits %}
+{%- if commit.scope -%}
+- *({{commit.scope}})* {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }}{%- if commit.links %} ({% for link in commit.links %}[{{link.text}}]({{link.href}}) {% endfor -%}){% endif %}
+{% else -%}
+- {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }}
+{% endif -%}
+{% endfor -%}
+{% endfor %}
+"""
