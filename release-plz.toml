@@ -1,5 +1,6 @@
 [workspace]
 release_always = false
+git_release_latest = false
 
 [[package]] # the double square brackets define a TOML table array
 name = "marco-test-two" # name of the package to configure
