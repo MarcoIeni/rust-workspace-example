@@ -936,7 +936,7 @@ version = "0.3.13"
 
 [[package]]
 name = "marco-test-three"
-version = "0.1.15"
+version = "0.1.16"
 dependencies = [
  "anyhow",
  "lapin",
