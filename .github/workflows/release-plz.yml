@@ -43,7 +43,7 @@ jobs:
         run: |
           set -e
           pr_number=${{ fromJSON(steps.release-plz.outputs.pr).number }}
-          if [[ -n "$pr_number" ]]
+          if [[ -n "$pr_number" ]]; then
             gh pr checkout $pr_number
             echo "new readme" > README.md
             git add .
