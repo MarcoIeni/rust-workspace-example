@@ -32,24 +32,16 @@ jobs:
         with:
           project_manifest: subdir/Cargo.toml
           command: release-pr
-      - name: Read release output
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASES: ${{ steps.release-plz.outputs.releases }}
-          PRS: ${{ steps.release-plz.outputs.prs }}
-          PR: ${{ steps.release-plz.outputs.pr }}
-          PRS_CREATED: ${{ steps.release-plz.outputs.prs_created }}
-          RELEASES_CREATED: ${{ steps.release-plz.outputs.releases_created }}
-        run: |
-          set -e
-          pr_number=${{ fromJSON(steps.release-plz.outputs.pr).number }}
-          if [[ -n "$pr_number" ]]; then
-            gh pr checkout $pr_number
-            echo "new readme" > README.md
-            git add .
-            git commit -m "Update README"
-            git push
-          fi
+      # - name: Read release output
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     RELEASES: ${{ steps.release-plz.outputs.releases }}
+      #     PRS: ${{ steps.release-plz.outputs.prs }}
+      #     PR: ${{ steps.release-plz.outputs.pr }}
+      #     PRS_CREATED: ${{ steps.release-plz.outputs.prs_created }}
+      #     RELEASES_CREATED: ${{ steps.release-plz.outputs.releases_created }}
+      #   run: |
+      #     set -e
       #     echo "releases: $RELEASES" # example: [{"package_name":"my-package","tag":"v0.1.0","version":"0.1.0"}]
       #     echo "prs: $PRS" # example: []
       #     echo "pr: $PR" # example: {}
