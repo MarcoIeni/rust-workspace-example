@@ -1,4 +1,4 @@
-pub fn hello() {
+pub fn hello_breaking() {
     println!("Hello, world!");
 }
 
