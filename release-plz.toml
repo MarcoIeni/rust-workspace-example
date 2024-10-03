@@ -23,7 +23,7 @@ body = """
                     ({% for link in commit.links %}[{{link.text}}]({{link.href}}) {% endfor -%})\
                 {% endif %}
         {% else -%}
-            - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }}{{ self::username(commit=commit) }}a
+            - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }}{{ self::username(commit=commit) }}
         {% endif -%}
     {% endfor -%}
 {% endfor %}
@@ -33,5 +33,7 @@ body = """
 * @{{ contributor.username }}
 {%- endfor %}
 {% endif -%}
-{%- macro username(commit) -%}{% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif -%}{% endmacro -%}
+{%- macro username(commit) -%}
+{% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif -%}
+{% endmacro -%}
 """
