@@ -18,12 +18,12 @@ body = """
     {% for commit in commits %}
         {%- if commit.scope -%}
             - *({{commit.scope}})* {% if commit.breaking %}[**breaking**] {% endif %}\
-                {{ commit.message }} (by @{{ commit.contributor.username }})\
+                {{ commit.message }} (by @{{ commit.remote.username }})\
                 {%- if commit.links %} \
                     ({% for link in commit.links %}[{{link.text}}]({{link.href}}) {% endfor -%})\
                 {% endif %}
         {% else -%}
-            - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }} (by @{{ commit.contributor.username }})
+            - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }} (by @{{ commit.remote.username }})
         {% endif -%}
     {% endfor -%}
 {% endfor %}
