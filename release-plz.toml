@@ -8,6 +8,9 @@ name = "marco-test-one"
 
 [changelog]
 body = """
+{% macro username(commit) -%}
+{% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif %}
+{% endmacro -%}
 ## [{{ version | trim_start_matches(pat="v") }}]\
     {%- if release_link -%}\
         ({{ release_link }})\
@@ -33,7 +36,4 @@ body = """
 * @{{ contributor.username }}
 {%- endfor %}
 {% endif %}
-{% macro username(commit) -%}
-{% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif %}
-{% endmacro -%}
 """
