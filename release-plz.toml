@@ -27,7 +27,7 @@ body = """
         {% endif -%}
     {% endfor -%}
 {% endfor %}
-{% if remote.contributors %-}
+{% if remote.contributors -%}
 ### Contributors
 {% for contributor in remote.contributors %}
 * @{{ contributor.username }}
