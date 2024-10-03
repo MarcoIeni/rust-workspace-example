@@ -23,7 +23,7 @@ body = """
                     ({% for link in commit.links %}[{{link.text}}]({{link.href}}) {% endfor -%})\
                 {% endif %}
         {% else -%}
-            - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }} (by @{{ commit.remote.username }})
+            - {% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message }}{% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif %}
         {% endif -%}
     {% endfor -%}
 {% endfor %}
