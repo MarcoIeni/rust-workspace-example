@@ -31,7 +31,10 @@ body = """
 ### Contributors
 {% for contributor in remote.contributors %}
 * @{{ contributor.username }}
-{%- endfor -%}
+{%- endfor %}
+
+
+
 
 {%- endif -%}
 """
