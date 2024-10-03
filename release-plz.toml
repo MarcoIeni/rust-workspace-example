@@ -32,7 +32,7 @@ body = """
 ### Contributors
 {% for contributor in remote.contributors %}
 * @{{ contributor.username }}
-{%- endfor -%}
+{%- endfor %}
 {% endif -%}
 {%- macro username(commit) -%}{% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif -%}{% endmacro -%}
 """
