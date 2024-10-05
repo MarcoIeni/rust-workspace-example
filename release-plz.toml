@@ -2,12 +2,12 @@
 git_release_body = """
 {{ changelog }}
 
-{%- if remote.contributors %}
+{% if remote.contributors %}
 ### Contributors
 {% for contributor in remote.contributors %}
-    * @{{ contributor.username }}
-{%- endfor %}
-{% endif -%}
+* @{{ contributor.username }}
+{% endfor %}
+{% endif %}
 """
 
 [[package]] # the double square brackets define a TOML table array
