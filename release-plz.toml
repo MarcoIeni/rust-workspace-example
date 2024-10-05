@@ -1,7 +1,6 @@
 [workspace]
 git_release_body = """
 {{ changelog }}
-
 {% if remote.contributors %}
 ### Contributors
 {% for contributor in remote.contributors %}
