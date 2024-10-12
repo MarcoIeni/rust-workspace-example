@@ -41,6 +41,6 @@ body = """
     {% if commit.remote.username %} (by @{{ commit.remote.username }}){% endif -%}
 {% endmacro -%}
 {%- macro pr(commit) -%}
-    {% if commit.remote.pr_number %} - #@{{ commit.remote.pr_number }}){% endif -%}
+    {% if commit.remote.pr_number %} - #{{ commit.remote.pr_number }}{% endif -%}
 {% endmacro -%}
 """
