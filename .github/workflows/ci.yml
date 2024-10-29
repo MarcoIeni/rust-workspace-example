@@ -10,6 +10,9 @@ defaults:
   run:
     working-directory: subdir
 
+env:
+  CARGO_INCREMENTAL: 0
+
 jobs:
   test:
     name: Test Suite
@@ -17,13 +20,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
-      - uses: Swatinem/rust-cache@v2
+      - name: Update Rust toolchain
+        run: rustup update stable
       - name: Run tests
         run: cargo test --all-features --workspace
 
@@ -33,13 +31,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
-          components: rustfmt
+      - name: Update Rust toolchain
+        run: rustup update stable
       - uses: Swatinem/rust-cache@v2
       - name: Check formatting
         run: cargo fmt --all --check
@@ -50,13 +43,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
-          components: clippy
+      - name: Update Rust toolchain
+        run: rustup update stable
       - uses: Swatinem/rust-cache@v2
       - name: Clippy check
         run: cargo clippy --all-targets --all-features --workspace -- -D warnings
@@ -67,12 +55,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
+      - name: Update Rust toolchain
+        run: rustup update stable
       - uses: Swatinem/rust-cache@v2
       - name: Check documentation
         env:
