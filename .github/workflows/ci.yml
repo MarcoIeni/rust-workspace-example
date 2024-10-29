@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Rust toolchain
-        run: rustup toolchain install stable --profile minimal --no-self-update
+        run: rustup update stable --no-self-update
       - uses: Swatinem/rust-cache@v2
       - name: Run tests
         run: cargo test --all-features --workspace
@@ -34,7 +34,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Install Rust toolchain
-        run: rustup toolchain install stable --profile minimal --no-self-update
+        run: rustup update stable --no-self-update
       - uses: Swatinem/rust-cache@v2
       - name: Check formatting
         run: cargo fmt --all --check
@@ -46,7 +46,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Update Rust toolchain
-        run: rustup update stable
+        run: rustup update stable --no-self-update
       - uses: Swatinem/rust-cache@v2
       - name: Clippy check
         run: cargo clippy --all-targets --all-features --workspace -- -D warnings
@@ -58,7 +58,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Update Rust toolchain
-        run: rustup update stable
+        run: rustup update stable --no-self-update
       - uses: Swatinem/rust-cache@v2
       - name: Check documentation
         env:
