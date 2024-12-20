@@ -38,6 +38,7 @@ jobs:
   release-plz-pr:
     name: Release-plz PR
     permissions:
+      contents: write
       pull-requests: write
     runs-on: ubuntu-latest
     concurrency:
